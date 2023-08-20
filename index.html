@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OsEm Weather Forecast</title>
+    <!-- BOOTSTRAP CSS -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    /> -->
+
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black">
+    <div class="text-light container">
+      <!-- SEARCH FORM  -->
+      <form class="searchForm">
+        <fieldset class="mx-auto my-4">
+          <legend class="text-center fs-2 fw-bold">Weather Forecast</legend>
+          <label for="city" class="form-label">Enter your city</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            class="form-control"
+            placeholder="eg. london"
+          />
+        </fieldset>
+      </form>
+      <!-- WEATHER DISPLAY CARD -->
+      <div
+        class="mx-auto text-center my-5 p-3 border rounded card-wrapper d-none"
+      >
+        <div class="card bg-transparent border-0">
+          <img
+            src="https://placehold.co/300"
+            alt="day/night"
+            class="card-img-top timeImg"
+          />
+          <div class="icon">
+            <img
+              src="https://placehold.co/100"
+              class="rounded-circle"
+              alt="Weather Icon"
+            />
+          </div>
+          <div class="card-body details p-0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-1">
+      <a
+        tabindex="0"
+        class="btn btn-sm btn-warning text-dark"
+        role="button"
+        data-mdb-toggle="popover"
+        data-mdb-trigger="focus"
+        title="Limitation"
+        data-mdb-content="I used Accu Weather API for weather infomation. It has no free plans; instead, they offer a “limited trial” with up to 50 calls per day. Kindly remember! If it stops getting weather conditions, it might be running out of shots for today."
+      >
+        Warning Message
+      </a>
+    </div>
+
+    <footer class="text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-2">
+        Developed by
+        <a class="text-danger" href="https://github.com/OsEm-22">OsEm-23</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+    ></script>
+    <script src="scripts/forecast.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
